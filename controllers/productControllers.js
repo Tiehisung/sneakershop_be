@@ -4,7 +4,6 @@ module.exports = {
   createProduct: async (req, res) => {
     try {
       const data = req.body;
-      console.log("product data", data);
       const newProduct = new Product(data);
       await newProduct.save();
       res.status(200).json("Product created");
